@@ -98,6 +98,13 @@
 //    }
     
     }
+
+- (BOOL)textFieldShouldReturn:(UITextField *)textField {
+    if (textField == self.comments) {
+        [textField resignFirstResponder];
+    }
+    return NO;
+}
     - (void)keyboardWillBeHidden:(NSNotification *)aNotification {
         
         NSDictionary* info = [aNotification userInfo];
